@@ -1,24 +1,40 @@
-# README
+Filtro de Mediana em Imagens PGM
+Introdução
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto aplica o filtro de mediana em imagens no formato PGM (Portable Gray Map) utilizando Ruby on Rails. O filtro de mediana é uma técnica de processamento de imagem usada para reduzir o ruído, preservando as bordas da imagem.
+Instalação
 
-Things you may want to cover:
+Siga os passos abaixo para configurar e executar o projeto:
 
-* Ruby version
+    Clone o repositório:
 
-* System dependencies
+    git clone https://github.com/RogersTheMan/TrabalhoMedianaComputacao.git
+    cd TrabalhoMedianaComputacao
 
-* Configuration
+    Instale as dependências:
 
-* Database creation
+    bundle install
 
-* Database initialization
+    Inicie o servidor Rails:
 
-* How to run the test suite
+    rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+Uso
 
-* Deployment instructions
+    Acesse a interface de upload de imagens através do navegador:
 
-* ...
+    http://localhost:3000/
+
+    Faça o upload de uma imagem no formato PGM.
+
+    Após o upload, a imagem será processada e o filtro de mediana será aplicado. Você será redirecionado para uma página onde poderá visualizar a imagem original e a imagem filtrada.
+
+Estrutura do Projeto
+
+    app/controllers/images_controller.rb: Controlador responsável pelo upload e processamento das imagens.
+    app/views/images/new.html.erb: Interface para upload de imagens.
+    config/routes.rb: Configuração das rotas para o controlador de imagens.
+
+Resultados
+
+Os resultados do processamento serão exibidos na interface do usuário, mostrando a imagem original e a imagem filtrada. O filtro de mediana ajuda a reduzir o ruído na imagem, resultando em uma imagem mais suave e com menos distorções.

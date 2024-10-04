@@ -1,0 +1,14 @@
+<h1>Comparação de Imagens</h1>
+
+<div style="display: flex; justify-content: space-around;">
+  <div>
+    <h2>Imagem Original</h2>
+    <img src="<%= @original_image_url %>" alt="Imagem Original">
+  </div>
+  <div>
+    <h2>Imagem Filtrada</h2>
+    <img src="<%= @filtered_image_url %>" alt="Imagem Filtrada">
+  </div>
+</div>
+
+<%= link_to 'Upload outra imagem', new_image_path %>

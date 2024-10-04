@@ -1,0 +1,12 @@
+<h1>Upload de Imagem</h1>
+
+<%= form_with url: images_path, local: true, multipart: true do |form| %>
+  <%= form.label :image, "Selecione uma imagem PGM" %>
+  <%= form.file_field :image %>
+  <%= form.submit "Upload" %>
+<% end %>
+
+<% if notice %>
+  <p><%= notice %></p>
+  <p>Imagem processada: <%= link_to 'Baixar', '/filtered_image.pgm' %></p>
+<% end %>
